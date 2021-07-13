@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container">
+    <h3>Detalle de transacción</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Numero de Cuenta</th>
+            <th scope="col">Comercio</th>
+            <th scope="col">Monto</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Ciudad</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item Of detailTrx">
+            <th>{{item.accountNumber}}</th>
+            <td>{{item.comercio}}</td>
+            <td>{{item.monto}}</td>
+            <td>{{item.status}}</td>
+            <td>{{item.datetrx}}</td>
+            <td>{{item.ciudad}}</td>
+        </tr>
+        </tbody>
+  </table>
+</div>

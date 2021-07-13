@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="container">
+    <h3>Listado de Cuentas Bancarias</h3>
+    <button type="button" class="btn btn-primary" (click)="newProduct()">Solicitar producto</button>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Numero de Cuenta</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Monto</th>
+            <th scope="col">Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item Of accountLis" (click)="listTrx(item.id)">
+            <th scope="row">{{item.id}}</th>
+            <th>{{item.accountNumber}}</th>
+            <td>{{item.description}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.monto}}</td>
+            <td>{{item.status}}</td>
+        </tr>
+        </tbody>
+  </table>
+</div>

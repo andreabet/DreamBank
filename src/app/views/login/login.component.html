@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-primary" >
+    <a class="navbar-brand" routerLink="" routerLinkActive="active">
+      Banco de Sueños
+    </a>
+  </nav>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+      <input type="number" id="login" class="fadeIn second" formControlName="user" placeholder="Identification">
+      <input type="password" id="password" class="fadeIn third" formControlName="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div class="alert alert-danger" *ngIf="errorStatus">
+      <p>{{errorMsg}}</p>
+    </div>
+
+  </div>
+</div>
